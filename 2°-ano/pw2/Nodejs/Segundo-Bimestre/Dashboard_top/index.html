@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard dahora</title>
 </head>
 <body>
     <div class="header">
-        <h1>aasdbkabdkas</h1>
+        <h1>Dados pokémon Scarlet e Violet</h1>
     </div>
     <div class="container">
         <div class="dados">
-            <p>aaaaaaaaaab</p>
+            <p>Este dashboard apresenta dados fictícios de uma pesquisa sobre preferências e comportamento dos usuários na plataforma. Os gráficos foram desenvolvidos para demonstrar visualmente informações como crescimento de usuários, personagens mais utilizados, preferências de categorias e plataformas de acesso, facilitando a análise e interpretação dos dados.</p>
         </div>
         <div class="graficos">
-            <div class="donut"><p>aaa</p></div>
-            <div class="line"><p>aaa</p></div>
-            <div class="polar"><p>aaa</p></div>
-            <div class="radar"><p>aaa</p></div>
+            <div><canvas id="donut"></canvas></div>
+            <div><canvas id="line"></canvas></div>
+            <div><canvas id="polar"></canvas></div>
+            <div><canvas id="radar"></canvas></div>
         </div>
     </div>
+
+    <script src="script/rosquinha.js"></script>
+    <script src="script/linha.js"></script>
+    <script src="script/polar.js"></script>
+    <script src="script/radar.js"></script>
 </body>
 </html>

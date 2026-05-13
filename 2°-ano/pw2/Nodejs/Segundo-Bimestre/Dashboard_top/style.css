@@ -1,27 +1,30 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+.dados{
+    font-family: sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: darkgray;
+}
+
 .container{
     display: flex;
 }
-.dados{
-    background-color: aquamarine;
-}
+
 .graficos{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-left: 30px;
 }
-
-.donut{
-    background-color: blue;
-}
-
-.line{
-    background-color: green;
-}
-
-.polar{
-    background-color: yellow;
-}
-
-.radar{
-    background-color: purple;
+.graficos div{
+    width: 300px;
+    height: 300px;
 }
