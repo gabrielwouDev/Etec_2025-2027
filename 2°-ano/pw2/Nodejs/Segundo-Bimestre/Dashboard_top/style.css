@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+}
+.dados{
+    background-color: aquamarine;
+}
+.graficos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 30px;
+}
+
+.donut{
+    background-color: blue;
+}
+
+.line{
+    background-color: green;
+}
+
+.polar{
+    background-color: yellow;
+}
+
+.radar{
+    background-color: purple;
+}
