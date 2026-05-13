@@ -1,20 +1,34 @@
 body,html{
     margin: 0;
     padding: 0;
-    background-color: beige;
+    background-color: rgb(209, 209, 209);
 }
 
 .dados{
     font-family: sans-serif;
+    margin-right: 20px;
+    margin-left: 5px;
+    height: 200px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    box-shadow: -7px 10px black;
+    margin-top: 10px;
 }
 
 .header{
     display: flex;
     justify-content: center;
     font-family: sans-serif;
-    background-color: darkgray;
+    background-color: rgb(34, 28, 124);
+    color: antiquewhite;
+}
+#cor{
+    color: rgb(255, 60, 0);
 }
 
+#cor2{
+    color: rgb(120, 18, 204);
+}
 .container{
     display: flex;
 }
@@ -27,4 +41,8 @@ body,html{
 .graficos div{
     width: 300px;
     height: 300px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    margin: 10px;
+    box-shadow: -10px 10px black;
 }
