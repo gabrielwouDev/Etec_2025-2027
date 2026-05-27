@@ -5,6 +5,12 @@ import { filtrarTimes,filtrarTimesSg,filtrarTimesN,filtrarTimesFase,desempenhoTi
 import { times } from './script/bd.js'
 
 const app = express()
+app.use(cors());
+
+const corsOptions = {
+  origin: '*'
+};
+app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.send('Hello World')
