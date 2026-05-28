@@ -1,12 +1,18 @@
-import { pegarDados } from "./pegaDados.js";
+import { pegarMelhores8,pegarSaldo } from "./buscarDados.js";
 import { criarGrafico } from "./criarGrafico.js";
 
-// buscar dados no BACK END
-let dados = await pegarDados()
+//Buscando dados
+let dados = await pegarMelhores8()
+let dados2 = await pegarSaldo()
 
-// Criar OBJETO DO GRÁFICO
+// Criando objetos dos gráficos
 let config = criarGrafico(dados)
+let config2 = criarGrafico(dados2)
 
-// GERAR o GRÁFICO
-const ctx = document.getElementById('myChart');
+
+// Gerando os gráficos
+const ctx = document.getElementById('melhoresTimes');
 new Chart(ctx, config)
+
+const ctx2 = document.getElementById('maiorSaldo')
+new Chart(ctx2,config2)

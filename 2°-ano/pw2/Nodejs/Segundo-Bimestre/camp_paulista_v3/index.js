@@ -1,4 +1,4 @@
-
+import cors from 'cors'
 import express from 'express'
 import {calculaPontos,buscarTime} from './script/opc.js'
 import { filtrarTimes,filtrarTimesSg,filtrarTimesN,filtrarTimesFase,desempenhoTime,timesOrdem,pontosTimes } from './script/consumir.js'
