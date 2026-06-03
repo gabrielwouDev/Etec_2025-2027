@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, rgb(8, 3, 23),rgb(41, 65, 78));
+    background-repeat:no-repeat ;
+    color: azure;
+    overflow: hidden;
+}
+
+.container{
+    border: 3px solid azure;
+    border-radius: 10px;
+    box-shadow: -7px 10px azure;
+    transform: scale(0.8);
+}
+
+.titulo{
+    justify-self: center;
+    font-size: 150px;
+}
+
+.link{
+    justify-self: center;
+}

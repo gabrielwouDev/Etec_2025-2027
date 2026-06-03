@@ -1,5 +1,5 @@
 import { pegarMelhores8,pegarSaldo,pegarPassaramDeFase,pegarDesempenhoDosTimes,pegarOrdemPontuacao } from "./buscarDados.js";
-import { criarGrafico } from "./criarGrafico.js";
+import { criarGrafico,criarGrafico2,criarGrafico3,criarGrafico4,criarGrafico5 } from "./criarGrafico.js";
 
 //Buscando dados
 let dados = await pegarMelhores8();
@@ -10,10 +10,10 @@ let dados5 = await pegarOrdemPontuacao();
 
 // Criando objetos dos gráficos
 let config = criarGrafico(dados);
-let config2 = criarGrafico(dados2);
-let config3 = criarGrafico(dados3);
-let config4 = criarGrafico(dados4);
-let config5 = criarGrafico(dados5);
+let config2 = criarGrafico2(dados2);
+let config3 = criarGrafico3(dados3);
+let config4 = criarGrafico4(dados4);
+let config5 = criarGrafico5(dados5);
 
 // Gerando os gráficos
 const ctx = document.getElementById('melhoresTimes');
