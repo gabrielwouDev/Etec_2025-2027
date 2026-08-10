@@ -1,0 +1,48 @@
+html,body{
+    font-family: Orbitron;
+    margin: 0;
+    padding: 0;
+    background-color: #111827;
+}
+
+
+.navbar{
+    background-color: #6D28D9;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+h1{
+    margin: 0;
+}
+
+.tabela{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid black;
+    background-color: #6D28D9;
+}
+
+tr{
+    background-color:#3f4146;
+}
+tr:nth-child(even) {
+    background-color: #5f5f69;
+}
+
+td{
+    border: 2px solid black;
+}
+
