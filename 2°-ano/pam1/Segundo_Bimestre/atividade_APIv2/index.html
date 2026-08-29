@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Orbitron:wght@400..900&display=swap');
+    </style>
+</head>
+<body>
+    <h1>Tabelas:</h1>
+
+    <div class="botoes">
+        <button class="btn" value="products">
+            <h2>Produtos</h2>
+        </button>
+        <button class="btn" value="users">
+            <h2>Usuarios</h2>
+        </button>
+        <button class="btn" value="cart">
+            <h2>Carrinhos</h2>
+        </button>
+    </div>
+
+    <script>
+        let btn = document.querySelectorAll('.btn')
+
+        btn.forEach(function(botao){
+            botao.addEventListener('click', avancar)
+        })
+
+        function avancar(){
+            if(this.value == "products"){
+                window.location.href = "./views/products.html"
+            }else if(this.value == "users"){
+                window.location.href = "./views/users.html"
+            }else if(this.value == "cart"){
+                window.location.href = "./views/cart.html"
+            }
+        }
+
+    </script>
+</body>
+</html>
