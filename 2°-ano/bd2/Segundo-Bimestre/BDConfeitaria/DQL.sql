@@ -22,6 +22,7 @@ EXEC spInsere_categoria 'Bolo Simples';
 EXEC spInsere_categoria 'Torta';
 EXEC spInsere_categoria 'Salgado';
 
+
 /*
 b) Criar uma Stored Procedure para inserir os produtos abaixo, sendo que, a procedure deverá
 antes de inserir verificar se o nome do produto já existe, evitando assim que um produto seja
@@ -57,6 +58,8 @@ EXEC spInsere_Produto 'Coxinha Frango',25.00,4;
 EXEC spInsere_Produto 'Esfiha carne',27.00,4;
 EXEC spInsere_Produto 'Folhado Queijo',31.00,4;
 EXEC spInsere_Produto 'Risoles Misto',29.00,4;
+
+
 
 /*
 c) Criar uma stored procedure para cadastrar os clientes abaixo relacionados, sendo que deverão
@@ -164,11 +167,16 @@ CREATE PROCEDURE spItens_Encomenda
     @subTotal			MONEY
 AS
 	DECLARE @codItensEncomenda INT
-	BEGIN
-		INSERT INTO tbItensEncomenda(codEncomenda,codProduto,quantidadeKilos,subTotal)
-		VALUES 
-		(@codEncomenda,@codProduto,@quantidadeKilos,@subTotal)
-    END
+	IF EXISTS(SELECT @codEncomenda FROM tbEncomenda WHERE codEncomenda = @codEncomenda)
+		BEGIN
+			INSERT INTO tbItensEncomenda(codEncomenda,codProduto,quantidadeKilos,subTotal)
+			VALUES 
+			(@codEncomenda,@codProduto,@quantidadeKilos,@subTotal)
+		END
+		ELSE
+		BEGIN
+			PRINT ('ERRO não foi possível adicionar o item pois a encomenda não existe!')
+		END
 
 EXEC spItens_Encomenda 1,1,2.5,105.00;
 EXEC spItens_Encomenda 1,10,2.6,70.00;
@@ -180,6 +188,10 @@ EXEC spItens_Encomenda 3,9,2,50.00;
 EXEC spItens_Encomenda 4,2,3.5,150.00;
 EXEC spItens_Encomenda 4,3,2.2,100.00;
 EXEC spItens_Encomenda 5,6,3.4,150.00;
+
+--código para testar validação 
+EXEC spItens_Encomenda 10,6,3.4,150.00;
+
 
 /*
 f)	Apos todos os cadastros crair stored procedures para alterar o que se pede:
